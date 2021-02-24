@@ -3,7 +3,7 @@ ifeq ($(APP_NAME_KEY),)
 endif
 
 up:
-	docker-compose -f src/devops/docker-compose.yml if [ $NODE_ENV==='dedvelopment' ];then --env-file .dev/.env;fi; up -d
+	docker-compose -f src/devops/docker-compose.yml --env-file .dev/.env up -d
 run:
 	docker-compose
 test:
